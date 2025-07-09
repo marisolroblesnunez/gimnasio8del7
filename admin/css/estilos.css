@@ -299,3 +299,122 @@ form {
   color: #999;
   cursor: pointer;
 }
+
+/* Estilos para las notificaciones */
+.notificacion {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+.notificacion.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Tipo: success */
+.notificacion.success {
+    background-color: #28a745; /* Verde */
+}
+
+/* Tipo: error */
+.notificacion.error {
+    background-color: #dc3545; /* Rojo */
+}
+
+/* Tipo: info */
+.notificacion.info {
+    background-color: #17a2b8; /* Azul/celeste */
+}
+
+/* --- Estilos para la Tabla de Administración (Testimonios, etc.) --- */
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.tabla-admin th,
+.tabla-admin td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabla-admin th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.tabla-admin tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-admin tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para la columna de acciones */
+.tabla-admin .acciones {
+    text-align: center;
+}
+
+.tabla-admin .acciones button {
+    padding: 6px 10px;
+    margin: 0 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.btn-aprobar {
+    background-color: #28a745;
+    color: white;
+}
+.btn-aprobar:hover {
+    background-color: #218838;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+
+/* Estilos para los estados (pendiente, aprobado) */
+.estado {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.estado.pendiente {
+    background-color: #ffc107; /* Amarillo */
+    color: #333;
+}
+
+.estado.aprobado {
+    background-color: #28a745; /* Verde */
+}
